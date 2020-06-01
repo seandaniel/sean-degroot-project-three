@@ -1,0 +1,37 @@
+form {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  input {
+    font-family: $primary-font;
+    font-size: 32px;
+    color: $primary-color;
+    border: 6px solid $primary-color;
+    background-color: inherit;
+    padding: 25px 100px 25px 5px;
+    transition: background-color .35s;
+  }
+}
+
+form input::placeholder {
+  color: $primary-color;
+  opacity: 1;
+}
+
+form input:focus {
+  background-color: lighten($secondary-color, 10%);
+}
+
+.scoreboard {
+  margin: 0 auto;
+  width: 400px;
+  h3 {
+    text-transform: lowercase;
+    font-size: 32px;
+  }
+}
+
+.incorrect-styles {
+  color: #f06464;
+  transition: color .35s;
+}
