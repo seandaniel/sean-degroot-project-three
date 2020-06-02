@@ -41,7 +41,7 @@ form input:focus {
     border: 2px solid $primary-color;
     transition: background-color .35s, color .35s;
     &:hover,
-    &:active {
+    &:focus {
       background-color: inherit;
       color: inherit;
     }
