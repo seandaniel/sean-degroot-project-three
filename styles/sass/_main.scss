@@ -27,6 +27,7 @@ form input:focus {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-bottom: 200px;
   width: 535px;
   h3 {
     text-transform: lowercase;
@@ -40,16 +41,17 @@ form input:focus {
     border-radius: 3px;
     border: 2px solid $primary-color;
     transition: background-color .35s, color .35s;
-    &:hover,
-    &:focus {
-      background-color: inherit;
-      color: inherit;
-    }
+    cursor: auto;
   }
 }       
 
+.reset-hover:hover {
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+}
 
-.incorrect-styles {
-  color: #f06464;
-  transition: color .35s;
+.score {
+  position: relative;
+  transition: left .35s, color .35s;
 }
