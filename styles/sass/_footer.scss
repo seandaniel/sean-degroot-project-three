@@ -1,6 +1,6 @@
 .footer-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-end;
   width: 535px;
   h4 {
@@ -21,4 +21,9 @@
       color: inherit;
     }
   }
+}
+
+.highscore {
+  font-size: 32px;
+  text-transform: lowercase;
 }

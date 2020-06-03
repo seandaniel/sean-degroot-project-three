@@ -27,8 +27,8 @@ form input:focus {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 200px;
   width: 535px;
+  margin-bottom: 200px;
   h3 {
     text-transform: lowercase;
     font-size: 32px;
@@ -41,17 +41,20 @@ form input:focus {
     border-radius: 3px;
     border: 2px solid $primary-color;
     transition: background-color .35s, color .35s;
-    cursor: auto;
+    &:hover,
+    &:active {
+      background-color: inherit;
+      color: inherit;
+    }
   }
 }       
-
-.reset-hover:hover {
-  background-color: inherit;
-  color: inherit;
-  cursor: pointer;
-}
 
 .score {
   position: relative;
   transition: left .35s, color .35s;
+}
+
+.game-over {
+  color: #f06464;
+  transition: .35s;
 }
