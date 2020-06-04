@@ -19,10 +19,11 @@ app.startTimer = () => {
     $('.timer').text(`Timer: ${$timer}`);
     if ($timer === 0){
       clearInterval(minute);
-      $('input').attr('disabled', true)
-      .css('background-color', '#24292e');
+      $('input').attr('disabled', true);
       $('.reset').toggleClass('reset-hover');
+      $('.score').css('color', '#f4f4f4');
       $('.timer').addClass('game-over');
+      // establishing a highscore
       if ($score > highScore) {
         highScore = $score;
         $('.highscore').text(`Highscore: ${highScore}`);
@@ -32,8 +33,9 @@ app.startTimer = () => {
 }
 
 app.submitWord = () => {
-  //or run this function once
-  if (parseInt($timer) === 10) {
+
+  // reset bug - run this function once?
+  if (parseInt($timer) === 5) {
     app.startTimer();
   }
 
@@ -42,6 +44,8 @@ app.submitWord = () => {
   if (userWord === randomWord) {
     $score++;
     randomWord = app.getRandomWord();
+
+    $('.correct-word').text(userWord);
     $('input').attr('placeholder', randomWord);
     $('.score').text(`Score: ${$score}`)
       .css('color', '#f4f4f4');
@@ -55,25 +59,27 @@ app.submitWord = () => {
   }
 
   $('input').val('');
+
 }
 
 $('.reset').on('click', () => {
   //disable start timer
-
   randomWord = 'start';
   $score = 0;
-  $timer = 10;
+  $timer = 5;
 
   $('.timer').removeClass('game-over')
-    .text('Timer: 10')
+    .text('Timer: 5')
 
   $('input')
     .attr('disabled', false)
-    .val('')
-    .attr('placeholder', 'start');
+    .attr('placeholder', 'start')
+    .val('');
 
   $('.score').text('Score: 0')
     .css('color', '#f4f4f4');
+
+  $('.correct-word').text('');
 });
 
 
