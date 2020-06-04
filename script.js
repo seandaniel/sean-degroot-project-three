@@ -38,7 +38,7 @@ app.submitWord = () => {
   if (parseInt($timer) === 5) {
     app.startTimer();
   }
-
+  
   userWord = ($('input').val()).toLowerCase();
 
   if (userWord === randomWord) {
