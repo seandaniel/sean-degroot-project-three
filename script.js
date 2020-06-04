@@ -6,7 +6,7 @@ let $score = ($('.score').text()).slice(-2);
 
 // grabs random word
 app.getRandomWord = () => {
-  const randomWordArray = ['hippopotamus', 'arrays', 'hockey', 'loops', 'orbitz', 'grid', 'flex', 'wes bos', 'vanilla', 'elephant', 'extravagant', 'reptile', 'compelling', 'witty', 'turmoil', 'bicycle', 'rampage', 'peanuts', 'raptors', 'antidote', 'california', 'mozilla', 'snowboarding', 'golden', 'liberal', 'monotone', 'client', 'github', 'nutritional', 'puppy', 'rudolph', 'search', 'react', 'babel', 'sass', 'school', 'juno', 'friendship', 'alternate', 'withstand', 'salt', 'banana', 'montreal', 'creating', 'background', 'transition', 'special', 'country', 'holland', 'partake', 'eventually', 'fill', 'chiropractor', 'developer', 'phantom', 'switch', 'broke', 'keyboard', 'shelf', 'television', 'factory', 'volkswagen', 'multi', 'selfish', 'willing', 'corduroy', 'sandwich', 'sushi', 'survivor', 'calc', 'coding', 'colorado', 'friendship', 'courteous', 'patronize', 'philanthropy', 'reddit', 'netflix', 'medium', 'farewell'];
+  const randomWordArray = ['hippopotamus', 'arrays', 'hockey', 'loops', 'orbitz', 'grid', 'flex', 'wes bos', 'vanilla', 'elephant', 'extravagant', 'reptile', 'compelling', 'witty', 'turmoil', 'bicycle', 'rampage', 'peanuts', 'raptors', 'antidote', 'california', 'mozilla', 'snowboarding', 'golden', 'liberal', 'monotone', 'client', 'github', 'nutritional', 'puppy', 'rudolph', 'search', 'react', 'babel', 'sass', 'school', 'juno', 'friendship', 'alternate', 'withstand', 'salt', 'banana', 'montreal', 'creating', 'background', 'transition', 'special', 'country', 'holland', 'partake', 'eventually', 'fill', 'chiropractor', 'developer', 'phantom', 'switch', 'broke', 'keyboard', 'shelf', 'television', 'factory', 'volkswagen', 'multi', 'selfish', 'willing', 'corduroy', 'sandwich', 'sushi', 'survivor', 'calc', 'coding', 'colorado', 'friendship', 'courteous', 'patronize', 'philanthropy', 'reddit', 'netflix', 'medium', 'farewell', 'salmonella', 'spatula', 'flipping', 'candid', 'galley', 'foot', 'amsterdam', 'salad', 'tantalizing', 'coupled', 'print', 'fringe', 'clarity', 'project', 'sean', 'apple', 'tunes', 'spotify', 'time', 'clock', 'perfect', 'wine', 'wrist', 'mango', 'dumpster', 'agonize', 'score', 'flowers', 'russia', 'archery', 'bowling', 'baseball', 'cannon', 'frozen', 'bewildered', 'black', 'twitter', 'length', 'function', 'object', 'playlist', 'follow', 'rumble', 'catalyst', 'junk', 'pillow', 'chimpanzee', 'elephant', 'clarification', 'glass', 'headphones', 'shelf', 'pins', 'plant', 'cord', 'mug', 'lamp', 'pencil', 'book'];
   const randomWord = randomWordArray[Math.floor(Math.random() * randomWordArray.length)];
   return randomWord;
 };
@@ -48,7 +48,7 @@ app.submitWord = () => {
     $('.correct-word').text(userWord);
     $('input').attr('placeholder', randomWord);
     $('.score').text(`Score: ${$score}`)
-      .css('color', '#f4f4f4');
+    .css('color', '#f4f4f4');
   } else {
     $('.score').animate({
       left: '100px',
