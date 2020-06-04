@@ -36,10 +36,6 @@ form input:focus {
   align-items: flex-end;
   width: 535px;
   margin-bottom: 200px;
-  h3 {
-    text-transform: lowercase;
-    font-size: 32px;
-  }
   .reset {
     color: $secondary-color;
     background-color: $primary-color;
@@ -62,7 +58,6 @@ form input:focus {
     align-items: flex-start;
   }
   .scoreboard h3 {
-    font-size: 25px;
     margin-bottom: 80px;
   }
 }

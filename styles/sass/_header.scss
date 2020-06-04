@@ -3,22 +3,18 @@ header {
   padding: 140px 0 40px;
   h1 {
     font-size: 64px;
-    text-transform: uppercase;
     font-weight: 600;
+    text-transform: uppercase;
   }
   h3 {
-    font-size: 32px;
+    color: #64f088;
     margin-top: 50px;
     height: 36.8px;
-    color: #64f088;
   }
 }
 
 @media (max-width: 580px) {
   header h1 {
     font-size: 50px;
-  }
-  header h3 {
-    font-size: 25px;
   }
 }
