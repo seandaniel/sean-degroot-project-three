@@ -35,7 +35,7 @@ app.startTimer = () => {
 app.submitWord = () => {
 
   // reset bug - run this function once?
-  if (parseInt($timer) === 5) {
+  if (parseInt($timer) === 60) {
     app.startTimer();
   }
   
@@ -66,10 +66,10 @@ $('.reset').on('click', () => {
   //disable start timer
   randomWord = 'start';
   $score = 0;
-  $timer = 5;
+  $timer = 60;
 
   $('.timer').removeClass('game-over')
-    .text('Timer: 5')
+    .text('Timer: 60')
 
   $('input')
     .attr('disabled', false)
