@@ -6,4 +6,19 @@ header {
     text-transform: uppercase;
     font-weight: 600;
   }
+  h3 {
+    font-size: 32px;
+    margin-top: 50px;
+    height: 36.8px;
+    color: #64f088;
+  }
+}
+
+@media (max-width: 580px) {
+  header h1 {
+    font-size: 50px;
+  }
+  header h3 {
+    font-size: 25px;
+  }
 }

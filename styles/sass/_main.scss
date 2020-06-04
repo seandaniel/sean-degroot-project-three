@@ -14,6 +14,13 @@ form {
   }
 }
 
+@media (max-width: 580px) {
+  form input {
+    font-size: 25px;
+    width: 100%;
+  }
+}
+
 form input::placeholder {
   color: $primary-color;
   opacity: 1;
@@ -47,7 +54,18 @@ form input:focus {
       color: inherit;
     }
   }
-}       
+} 
+
+@media (max-width:580px) {
+  .scoreboard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .scoreboard h3 {
+    font-size: 25px;
+    margin-bottom: 80px;
+  }
+}
 
 .score {
   position: relative;
@@ -56,5 +74,5 @@ form input:focus {
 
 .game-over {
   color: #f06464;
-  transition: .35s;
+  transition: color .35s;
 }

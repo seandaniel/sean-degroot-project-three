@@ -1,11 +1,11 @@
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-end;
-  width: 535px;
-  h4 {
+  h3 {
     font-size: 32px;
     margin-right: 50px;
+    text-transform: lowercase;
   }
   a {
     font-size: 30px;
@@ -23,7 +23,12 @@
   }
 }
 
-.highscore {
-  font-size: 32px;
-  text-transform: lowercase;
+@media (max-width: 580px) {
+  .footer-container {
+    justify-content: space-between;
+    h3 {
+      font-size: 25px;
+      margin-right: 0;
+    }
+  }
 }
