@@ -42,11 +42,11 @@ form input:focus {
     padding: 10px;
     font-size: 23px;
     border-radius: 3px;
-    border: 2px solid $primary-color;
+    border: 3px solid $primary-color;
     transition: background-color .35s, color .35s;
     &:hover,
-    &:active {
-      background-color: inherit;
+    &:focus {
+      background-color: lighten($secondary-color, 10%);
       color: inherit;
     }
   }

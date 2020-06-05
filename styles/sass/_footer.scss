@@ -8,16 +8,16 @@
     text-transform: lowercase;
   }
   a {
-    font-size: 30px;
+    font-size: 25px;
     background-color: $primary-color;
     color: $secondary-color;
-    padding: 8px;
+    padding: 10px;
     border-radius: 3px;
     border: 3px solid $primary-color;
     transition: background-color .35s, color .35s;
     &:hover,
-    &:active {
-      background-color: inherit;
+    &:focus {
+      background-color: lighten($secondary-color, 10%);
       color: inherit;
     }
   }

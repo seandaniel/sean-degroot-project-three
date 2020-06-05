@@ -20,8 +20,8 @@ app.startTimer = () => {
     $timer--;
     $('.timer').text(`Timer: ${$timer}`);
     if ($timer === 0){
-      clearInterval(minute);
       $('input').attr('disabled', true);
+      clearInterval(minute);
       $('.reset').toggleClass('reset-hover');
       $('.score').css('color', '#f4f4f4');
       $('.timer').addClass('game-over');
@@ -35,13 +35,14 @@ app.startTimer = () => {
 }
 
 app.submitWord = () => {
+  
+  let userWord = ($('input').val()).toLowerCase();
 
   // prevents app.StartTimer() from running more than once
-  if (parseInt($timer) === 60) {
+  if (parseInt($timer) === 5 && userWord === 'start') {
     app.startTimer();
   }
   
-  userWord = ($('input').val()).toLowerCase();
 
   if (userWord === randomWord) {
     $score++;
@@ -70,10 +71,10 @@ $('.reset').on('click', () => {
 
   randomWord = 'start';
   $score = 0;
-  $timer = 60;
+  $timer = 5;
 
   $('.timer').removeClass('game-over')
-    .text('Timer: 60')
+    .text('Timer: 5')
 
   $('input')
     .attr('disabled', false)
@@ -89,10 +90,10 @@ $('.reset').on('click', () => {
 
 app.init = () => {
   randomWord = 'start';
-  
+
   $('form').on('submit', (e) => {
     e.preventDefault();
-      app.submitWord();
+    app.submitWord();
   });
 };
 
