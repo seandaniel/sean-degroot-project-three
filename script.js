@@ -39,7 +39,7 @@ app.submitWord = () => {
   let userWord = ($('input').val()).toLowerCase();
 
   // prevents app.StartTimer() from running more than once
-  if (parseInt($timer) === 5 && userWord === 'start') {
+  if (parseInt($timer) === 60 && userWord === 'start') {
     app.startTimer();
   }
   
@@ -71,10 +71,10 @@ $('.reset').on('click', () => {
 
   randomWord = 'start';
   $score = 0;
-  $timer = 5;
+  $timer = 60;
 
   $('.timer').removeClass('game-over')
-    .text('Timer: 5')
+    .text('Timer: 60')
 
   $('input')
     .attr('disabled', false)
