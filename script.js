@@ -6,22 +6,22 @@ let $score = ($('.score').text()).slice(-2);
 
 // grabs random word
 app.getRandomWord = () => {
-  const randomWordArray = ['hippopotamus', 'arrays', 'hockey', 'loops', 'orbitz', 'grid', 'flex', 'wes bos', 'vanilla', 'elephant', 'extravagant', 'reptile', 'compelling', 'witty', 'turmoil', 'bicycle', 'rampage', 'peanuts', 'raptors', 'antidote', 'california', 'mozilla', 'snowboarding', 'golden', 'liberal', 'monotone', 'client', 'github', 'nutritional', 'puppy', 'rudolph', 'search', 'react', 'babel', 'sass', 'school', 'juno', 'friendship', 'alternate', 'withstand', 'salt', 'banana', 'montreal', 'creating', 'background', 'transition', 'special', 'country', 'holland', 'partake', 'eventually', 'fill', 'chiropractor', 'developer', 'phantom', 'switch', 'broke', 'keyboard', 'shelf', 'television', 'factory', 'volkswagen', 'multi', 'selfish', 'willing', 'corduroy', 'sandwich', 'sushi', 'survivor', 'calc', 'coding', 'colorado', 'friendship', 'courteous', 'patronize', 'philanthropy', 'reddit', 'netflix', 'medium', 'farewell', 'salmonella', 'spatula', 'flipping', 'candid', 'gallery', 'foot', 'amsterdam', 'salad', 'tantalizing', 'coupled', 'print', 'fringe', 'clarity', 'project', 'sean', 'apple', 'tunes', 'spotify', 'time', 'clock', 'perfect', 'wine', 'wrist', 'mango', 'dumpster', 'agonize', 'score', 'flowers', 'russia', 'archery', 'bowling', 'baseball', 'cannon', 'frozen', 'bewildered', 'black', 'twitter', 'length', 'function', 'object', 'playlist', 'follow', 'rumble', 'catalyst', 'junk', 'pillow', 'chimpanzee', 'elephant', 'clarification', 'glass', 'headphones', 'shelf', 'pins', 'plant', 'cord', 'mug', 'lamp', 'pencil', 'book', 'marley', 'mammal', 'puppy', 'ralph', 'calibrate', 'consider', 'frowned', 'photography', 'cinematography', 'beautiful', 'worship', 'punish', 'extract', 'simplify', 'conduct', 'pursue', 'depend', 'cappucino', 'tale', 'sword', 'skate', 'compass', 'ritual', 'hacker', 'neat', 'interrogate', 'purchase', 'monopoly', 'microsoft', 'linguistics', 'slam', 'quarantine', 'hospital', 'employment', 'vent', 'percolate', 'variable', 'fetch', 'plankton', 'harry', 'police', 'admin', 'continuous', 'family', 'earth', 'mars','jupiter', 'suspension', 'afraid', 'momentum', 'potential', 'dice', 'vehicle', 'shipping', 'cart', 'frantic', 'riley','north', 'tantalize', 'spa', 'landscape', 'golf', 'automobile', 'pavement', 'potato', 'rim', 'tire', 'oil', 'jug', 'wooden', 'concrete', 'laminate', 'pursuit', 'rumble', 'consequence', 'sidewalk', 'crank', 'insufferable', 'platoon', 'perplexed', 'rudimentary', 'canine', 'simpleton', 'salvage', 'ruin', 'pineapple', 'purchase', 'poision', 'dilemma'];
+  const randomWordArray = ['hippopotamus', 'arrays', 'hockey', 'loops', 'orbitz', 'grid', 'flex', 'wes bos', 'vanilla', 'elephant', 'extravagant', 'reptile', 'compelling', 'witty', 'turmoil', 'bicycle', 'rampage', 'peanuts', 'raptors', 'antidote', 'california', 'mozilla', 'snowboarding', 'golden', 'liberal', 'monotone', 'client', 'github', 'nutritional', 'puppy', 'rudolph', 'search', 'react', 'babel', 'sass', 'school', 'juno', 'friendship', 'alternate', 'withstand', 'salt', 'banana', 'montreal', 'creating', 'background', 'transition', 'special', 'country', 'holland', 'partake', 'eventually', 'fill', 'chiropractor', 'developer', 'phantom', 'switch', 'broke', 'keyboard', 'shelf', 'television', 'factory', 'volkswagen', 'multi', 'selfish', 'willing', 'corduroy', 'sandwich', 'sushi', 'survivor', 'calc', 'coding', 'colorado', 'friendship', 'courteous', 'patronize', 'philanthropy', 'reddit', 'netflix', 'medium', 'farewell', 'salmonella', 'spatula', 'flipping', 'candid', 'gallery', 'foot', 'amsterdam', 'salad', 'tantalizing', 'coupled', 'print', 'fringe', 'clarity', 'project', 'sean', 'apple', 'tunes', 'spotify', 'time', 'clock', 'perfect', 'wine', 'wrist', 'mango', 'dumpster', 'agonize', 'score', 'flowers', 'russia', 'archery', 'bowling', 'baseball', 'cannon', 'frozen', 'bewildered', 'black', 'twitter', 'length', 'function', 'object', 'playlist', 'follow', 'rumble', 'catalyst', 'junk', 'pillow', 'chimpanzee', 'elephant', 'clarification', 'glass', 'headphones', 'shelf', 'pins', 'plant', 'cord', 'mug', 'lamp', 'pencil', 'book', 'marley', 'mammal', 'puppy', 'ralph', 'calibrate', 'consider', 'frowned', 'photography', 'cinematography', 'beautiful', 'worship', 'punish', 'extract', 'simplify', 'conduct', 'pursue', 'depend', 'cappucino', 'tale', 'sword', 'skate', 'compass', 'ritual', 'hacker', 'neat', 'interrogate', 'purchase', 'monopoly', 'microsoft', 'linguistics', 'slam', 'quarantine', 'hospital', 'employment', 'vent', 'percolate', 'variable', 'fetch', 'plankton', 'harry', 'police', 'admin', 'continuous', 'family', 'earth', 'mars','jupiter', 'suspension', 'afraid', 'momentum', 'potential', 'dice', 'vehicle', 'shipping', 'cart', 'frantic', 'riley','north', 'tantalize', 'spa', 'landscape', 'golf', 'automobile', 'pavement', 'potato', 'rim', 'tire', 'oil', 'jug', 'wooden', 'concrete', 'laminate', 'pursuit', 'rumble', 'consequence', 'sidewalk', 'crank', 'insufferable', 'platoon', 'perplexed', 'rudimentary', 'canine', 'simpleton', 'salvage', 'ruin', 'pineapple', 'purchase', 'poison', 'dilemma'];
   const randomWord = randomWordArray[Math.floor(Math.random() * randomWordArray.length)];
   return randomWord;
 };
 
-let minute;
+let halfMinute;
 
 app.startTimer = () => {
   let highScore = $score;
 
-  minute = setInterval(function() {
+  halfMinute = setInterval(function() {
     $timer--;
     $('.timer').text(`Timer: ${$timer}`);
     if ($timer === 0){
       $('input').attr('disabled', true);
-      clearInterval(minute);
+      clearInterval(halfMinute);
       $('.reset').toggleClass('reset-hover');
       $('.score').css('color', '#f4f4f4');
       $('.timer').addClass('game-over');
@@ -39,7 +39,7 @@ app.submitWord = () => {
   let userWord = ($('input').val()).toLowerCase();
 
   // prevents app.StartTimer() from running more than once
-  if (parseInt($timer) === 60 && userWord === 'start') {
+  if (parseInt($timer) === 30 && userWord === 'start') {
     app.startTimer();
   }
   
@@ -67,14 +67,14 @@ app.submitWord = () => {
 
 $('.reset').on('click', () => {
 
-  clearInterval(minute);
+  clearInterval(halfMinute);
 
   randomWord = 'start';
   $score = 0;
-  $timer = 60;
+  $timer = 30;
 
   $('.timer').removeClass('game-over')
-    .text('Timer: 60')
+    .text('Timer: 30')
 
   $('input')
     .attr('disabled', false)
