@@ -52,7 +52,7 @@ app.submitWord = () => {
   } else {
     $('.score').animate({
       left: '100px',
-      color: '#f06464',star
+      color: '#f06464'
     }, 350, function () {
       $(this).css('left', '0');
     });
